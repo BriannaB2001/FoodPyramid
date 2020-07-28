@@ -60,11 +60,19 @@
 				DAE94A0A24D0719100A27B1C /* SceneDelegate.swift */,
 				DAE94A0C24D0719100A27B1C /* ViewController.swift */,
 				DAE94A0E24D0719100A27B1C /* Main.storyboard */,
-				DAE94A1124D0719200A27B1C /* Assets.xcassets */,
-				DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */,
-				DAE94A1624D0719200A27B1C /* Info.plist */,
+				DAE94A1C24D0734B00A27B1C /* Misc */,
 			);
 			path = FoodPyramid;
+			sourceTree = "<group>";
+		};
+		DAE94A1C24D0734B00A27B1C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				DAE94A1124D0719200A27B1C /* Assets.xcassets */,
+				DAE94A1624D0719200A27B1C /* Info.plist */,
+				DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
