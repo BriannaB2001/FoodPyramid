@@ -94,8 +94,8 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-Oh-Bml" userLabel="SwitchStack View">
-                                <rect key="frame" x="143" y="97" width="128.5" height="277"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-Oh-Bml" userLabel="AgeStack View">
+                                <rect key="frame" x="143" y="97" width="128.5" height="339"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wr4-aH-Ohj">
                                         <rect key="frame" x="0.0" y="0.0" width="128.5" height="277"/>
@@ -175,6 +175,11 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWA-Yz-CcA">
+                                        <rect key="frame" x="28" y="297" width="72" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa3-Jg-Nj5">
@@ -183,11 +188,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWA-Yz-CcA">
-                                <rect key="frame" x="175" y="404" width="72" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -195,18 +195,12 @@
                             <constraint firstItem="GF4-JB-3PO" firstAttribute="centerX" secondItem="5OS-l6-zGB" secondAttribute="centerX" id="Jvj-6w-icT"/>
                             <constraint firstItem="vrm-de-4nb" firstAttribute="trailing" secondItem="qa3-Jg-Nj5" secondAttribute="trailing" id="Y2F-sa-gAW"/>
                             <constraint firstItem="qa3-Jg-Nj5" firstAttribute="top" secondItem="vrm-de-4nb" secondAttribute="top" constant="20" id="YLb-h0-Ch2"/>
-                            <constraint firstItem="KWA-Yz-CcA" firstAttribute="top" secondItem="Gr9-Oh-Bml" secondAttribute="bottom" id="e8S-8C-zR3"/>
                             <constraint firstItem="qa3-Jg-Nj5" firstAttribute="centerX" secondItem="5OS-l6-zGB" secondAttribute="centerX" id="rE2-so-dXM"/>
                             <constraint firstItem="GF4-JB-3PO" firstAttribute="top" secondItem="vrm-de-4nb" secondAttribute="top" constant="100" id="uPf-vS-Yz1"/>
                             <constraint firstItem="qa3-Jg-Nj5" firstAttribute="leading" secondItem="vrm-de-4nb" secondAttribute="leading" id="vga-Qa-QKk"/>
                             <constraint firstItem="Gr9-Oh-Bml" firstAttribute="centerX" secondItem="5OS-l6-zGB" secondAttribute="centerX" id="xf4-6M-da1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vrm-de-4nb"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="GF4-JB-3PO"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="vsq-hf-8vA"/>
                     <connections>
@@ -217,14 +211,7 @@
                         <outlet property="Label5" destination="CjO-Yn-6iV" id="Jqo-t6-kqs"/>
                         <outlet property="Label6" destination="2ik-8E-jW2" id="Uux-gU-aWa"/>
                         <outlet property="Label7" destination="FTW-OZ-xot" id="jQp-ah-Wfv"/>
-                        <outlet property="Switch1" destination="rrt-pE-S2D" id="o2y-0r-ByO"/>
-                        <outlet property="Switch2" destination="ekc-PX-xjq" id="cXm-i3-WvG"/>
-                        <outlet property="Switch3" destination="2MO-dc-YMh" id="1Hv-7e-vkG"/>
-                        <outlet property="Switch4" destination="q9o-00-h0K" id="nSB-pP-5O6"/>
-                        <outlet property="Switch5" destination="zOG-Jj-iEp" id="S9g-yh-bpO"/>
-                        <outlet property="Switch6" destination="NT2-WG-TSL" id="M3z-ak-bs1"/>
-                        <outlet property="Switch7" destination="kQK-iE-S8z" id="g5J-3Z-8au"/>
-                        <outlet property="ageStackView" destination="Gr9-Oh-Bml" id="xe6-oa-zsq"/>
+                        <outlet property="ageStackView" destination="Gr9-Oh-Bml" id="tDk-Xp-kWW"/>
                         <outlet property="genderStackView" destination="GF4-JB-3PO" id="IcH-cw-tOq"/>
                         <outlet property="questionLabel" destination="qa3-Jg-Nj5" id="sTf-gs-Mjl"/>
                         <outlet property="singleButton1" destination="KMz-cu-JbO" id="Jvk-BP-o1b"/>
@@ -235,10 +222,10 @@
             </objects>
             <point key="canvasLocation" x="980" y="88"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Results Table View Controller-->
         <scene sceneID="Lx8-zt-ajH">
             <objects>
-                <tableViewController id="660-UJ-n6M" sceneMemberID="viewController">
+                <tableViewController id="660-UJ-n6M" customClass="ResultsTableViewController" customModule="FoodPyramid" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qxv-Lf-O5r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,6 +366,10 @@
                             <outlet property="delegate" destination="660-UJ-n6M" id="nKb-DF-SKZ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="fruitTableViewCell" destination="hFQ-2O-V9p" id="E5r-Q1-fkc"/>
+                        <outlet property="vegTableViewCell" destination="L1u-D4-ine" id="IPk-lu-20Y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfw-C2-NEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

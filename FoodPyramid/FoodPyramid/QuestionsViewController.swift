@@ -26,18 +26,81 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var Label5: UILabel!
     @IBOutlet weak var Label6: UILabel!
     @IBOutlet weak var Label7: UILabel!
-    @IBOutlet weak var Switch1: UISwitch!
-    @IBOutlet weak var Switch2: UISwitch!
-    @IBOutlet weak var Switch3: UISwitch!
-    @IBOutlet weak var Switch4: UISwitch!
-    @IBOutlet weak var Switch5: UISwitch!
-    @IBOutlet weak var Switch6: UISwitch!
-    @IBOutlet weak var Switch7: UISwitch!
-    
-    
+   
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    super.viewDidLoad()
+    updateUI()
 }
+    
+struct Question {
+    var text: String
+    var type: ResponseType
+    var answers: [Answer]
+}
+
+enum ResponseType {
+    case gender, age
+}
+    
+struct Answer {
+    var text: String
+}
+
+var questions: [Question] = [
+Question(text: "What's Your Gender?",
+    type: .gender,
+    answers: [
+    Answer(text: "Female"),
+    Answer(text: "Male")
+        ]),
+
+Question(text: "What's Your Age?",
+    type: .age,
+    answers: [
+    Answer (text: "Age 2-3"),
+    Answer (text: "Age 4-8"),
+    Answer (text: "Age 9-13"),
+    Answer (text: "Age 14-18"),
+    Answer (text: "Age 19-30"),
+    Answer (text: "Age 31-50"),
+    Answer (text: "Age 51+")
+        ])
+]
+
+
+func updateUI() {
+    genderStackView.isHidden = true
+    ageStackView.isHidden = true
+
+    let currentQuestion = questions[questionIndex]
+    let currentAnswers = currentQuestion.answers
+
+    navigationItem.title = "Question #\(questionIndex+1)"
+    questionLabel.text = currentQuestion.text
+
+    switch currentQuestion.type {
+    case .gender:
+        updateGenderStack(using: currentAnswers)
+    case .age:
+        updateAgeStack(using: currentAnswers)
+    }
+}
+    
+func updateGenderStack(using answers: [Answer]) {
+    genderStackView.isHidden = false
+    singleButton1.setTitle(answers[0].text, for: .normal)
+    singleButton2.setTitle(answers[1].text, for: .normal)
+}
+    
+func updateAgeStack(using answers: [Answer]) {
+    ageStackView.isHidden = false
+    Label1.text = answers[0].text
+    Label2.text = answers[1].text
+    Label3.text = answers[2].text
+    Label4.text = answers[3].text
+    Label5.text = answers[4].text
+    Label6.text = answers[5].text
+    Label7.text = answers[6].text
+}
+    
 }
