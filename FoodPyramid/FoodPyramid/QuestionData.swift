@@ -8,18 +8,19 @@
 
 import Foundation
 
-enum Gender {
-    case female, male
-}
+enum Gender: String, CaseIterable {
+    case female = "Female"
+    case male = "Male"
+    }
 
-enum AgeRange: String {
-    case a2To3 = "2-3"
-    case a4To8 = "4-8"
-    case a9To13 = "9-13"
-    case a14To18 = "14-18"
-    case a19To30 = "19-30"
-    case a31To50 = "31-50"
-    case a51 = "51+"
+enum AgeRange: String, CaseIterable {
+    case a2To3 = "Age 2-3"
+    case a4To8 = "Age 4-8"
+    case a9To13 = "Age 9-13"
+    case a14To18 = "Age 14-18"
+    case a19To30 = "Age 19-30"
+    case a31To50 = "Age 31-50"
+    case a51 = "Age 51+"
 }
 
 enum FoodGroups: String {

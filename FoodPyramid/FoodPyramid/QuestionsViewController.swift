@@ -49,24 +49,14 @@ struct Answer {
 var questions: [Question] = [
 Question(text: "What's Your Gender?",
     type: .gender,
-    answers: [
-    Answer(text: "Female"),
-    Answer(text: "Male")
-        ]),
+    answers: Gender.allCases.map({ Answer(text: $0.rawValue)})
+    ),
 
 Question(text: "What's Your Age?",
     type: .age,
-    answers: [
-    Answer (text: "Age 2-3"),
-    Answer (text: "Age 4-8"),
-    Answer (text: "Age 9-13"),
-    Answer (text: "Age 14-18"),
-    Answer (text: "Age 19-30"),
-    Answer (text: "Age 31-50"),
-    Answer (text: "Age 51+")
-        ])
+    answers: AgeRange.allCases.map({ Answer(text: $0.rawValue)})
+    ),
 ]
-
 
 func updateUI() {
     genderStackView.isHidden = true
