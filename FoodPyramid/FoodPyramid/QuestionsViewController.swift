@@ -158,4 +158,11 @@ var answersChosen: [Answer] = []
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultsSegue" {
+            let resultsTableViewController = segue.destination as! ResultsTableViewController
+            //resultsTableViewController.responses = answersChosen
+        }
+    }
+    
 }
