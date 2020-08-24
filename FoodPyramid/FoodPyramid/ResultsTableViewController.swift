@@ -9,14 +9,25 @@
 import UIKit
 
 class ResultsTableViewController: UITableViewController {
-
-    @IBOutlet weak var fruitTableViewCell: UITableViewCell!
     
-    @IBOutlet weak var vegTableViewCell: UITableViewCell!
+    var responses: [Answer]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
     // MARK: - Table view data source
 
@@ -29,4 +40,5 @@ class ResultsTableViewController: UITableViewController {
         return cell
     }
     */
+}
 }

@@ -19,45 +19,19 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var singleButton2: UIButton!
     
     @IBOutlet weak var ageStackView: UIStackView!
-    @IBOutlet weak var Label1: UILabel!
-    @IBOutlet weak var Label2: UILabel!
-    @IBOutlet weak var Label3: UILabel!
-    @IBOutlet weak var Label4: UILabel!
-    @IBOutlet weak var Label5: UILabel!
-    @IBOutlet weak var Label6: UILabel!
-    @IBOutlet weak var Label7: UILabel!
+    @IBOutlet weak var ageButton1: UIButton!
+    @IBOutlet weak var ageButton2: UIButton!
+    @IBOutlet weak var ageButton3: UIButton!
+    @IBOutlet weak var ageButton4: UIButton!
+    @IBOutlet weak var ageButton5: UIButton!
+    @IBOutlet weak var ageButton6: UIButton!
+    @IBOutlet weak var ageButton7: UIButton!
    
     override func viewDidLoad() {
     super.viewDidLoad()
     updateUI()
 }
     
-struct Question {
-    var text: String
-    var type: ResponseType
-    var answers: [Answer]
-}
-
-enum ResponseType {
-    case gender, age
-}
-    
-struct Answer {
-    var text: String
-}
-
-var questions: [Question] = [
-Question(text: "What's Your Gender?",
-    type: .gender,
-    answers: Gender.allCases.map({ Answer(text: $0.rawValue)})
-    ),
-
-Question(text: "What's Your Age?",
-    type: .age,
-    answers: AgeRange.allCases.map({ Answer(text: $0.rawValue)})
-    ),
-]
-
 func updateUI() {
     genderStackView.isHidden = true
     ageStackView.isHidden = true
@@ -84,13 +58,104 @@ func updateGenderStack(using answers: [Answer]) {
     
 func updateAgeStack(using answers: [Answer]) {
     ageStackView.isHidden = false
-    Label1.text = answers[0].text
-    Label2.text = answers[1].text
-    Label3.text = answers[2].text
-    Label4.text = answers[3].text
-    Label5.text = answers[4].text
-    Label6.text = answers[5].text
-    Label7.text = answers[6].text
+    ageButton1.setTitle(answers[0].text, for: .normal)
+    ageButton2.setTitle(answers[1].text, for: .normal)
+    ageButton3.setTitle(answers[2].text, for: .normal)
+    ageButton4.setTitle(answers[3].text, for: .normal)
+    ageButton5.setTitle(answers[4].text, for: .normal)
+    ageButton6.setTitle(answers[5].text, for: .normal)
+    ageButton7.setTitle(answers[6].text, for: .normal)
 }
     
+
+var answersChosen: [Answer] = []
+
+    @IBAction func genderButtonSelected(_ sender: UIButton) {
+        
+        let currentAnswers = questions[questionIndex].answers
+        
+            switch sender {
+            case singleButton1:
+                answersChosen.append(currentAnswers[0])
+                case singleButton1:
+                answersChosen.append(currentAnswers[1])
+                case singleButton1:
+                answersChosen.append(currentAnswers[2])
+                case singleButton1:
+                answersChosen.append(currentAnswers[3])
+                case singleButton1:
+                answersChosen.append(currentAnswers[4])
+                case singleButton1:
+                answersChosen.append(currentAnswers[5])
+                case singleButton1:
+                answersChosen.append(currentAnswers[6])
+            case singleButton2:
+                answersChosen.append(currentAnswers[7])
+                case singleButton2:
+                answersChosen.append(currentAnswers[8])
+                case singleButton2:
+                answersChosen.append(currentAnswers[9])
+                case singleButton2:
+                answersChosen.append(currentAnswers[10])
+                case singleButton2:
+                answersChosen.append(currentAnswers[11])
+                case singleButton2:
+                answersChosen.append(currentAnswers[12])
+                case singleButton2:
+                answersChosen.append(currentAnswers[13])
+            default:
+                break
+            }
+        nextQuestion()
+    }
+    
+    @IBAction func ageButtonPressed(_ sender: UIButton) {
+        let currentAnswers = questions[questionIndex].answers
+        
+            switch sender {
+            case ageButton1:
+                answersChosen.append(currentAnswers[0])
+                case ageButton1:
+                answersChosen.append(currentAnswers[7])
+            case ageButton2:
+                answersChosen.append(currentAnswers[1])
+                case ageButton2:
+                answersChosen.append(currentAnswers[8])
+            case ageButton3:
+                answersChosen.append(currentAnswers[2])
+                case ageButton3:
+                answersChosen.append(currentAnswers[9])
+            case ageButton4:
+                answersChosen.append(currentAnswers[3])
+                case ageButton4:
+                answersChosen.append(currentAnswers[10])
+                case ageButton5:
+                answersChosen.append(currentAnswers[4])
+                case ageButton5:
+                answersChosen.append(currentAnswers[11])
+                case ageButton6:
+                answersChosen.append(currentAnswers[5])
+                case ageButton6:
+                answersChosen.append(currentAnswers[12])
+                case ageButton7:
+                answersChosen.append(currentAnswers[6])
+                case ageButton7:
+                answersChosen.append(currentAnswers[13])
+            default:
+                break
+            }
+        
+            nextQuestion()
+    }
+    
+    func nextQuestion() {
+        questionIndex += 1
+    
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+          performSegue(withIdentifier: "ResultsSegue", sender: nil)
+        }
+    }
+
 }

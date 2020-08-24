@@ -8,6 +8,35 @@
 
 import Foundation
 
+
+struct Question {
+    var text: String
+    var type: ResponseType
+    var answers: [Answer]
+}
+
+enum ResponseType {
+    case gender, age
+}
+    
+struct Answer {
+    var text: String
+}
+
+var questions: [Question] = [
+Question(text: "What's Your Gender?",
+    type: .gender,
+    answers: Gender.allCases.map({ Answer(text: $0.rawValue)})
+    ),
+
+Question(text: "What's Your Age?",
+    type: .age,
+    answers: AgeRange.allCases.map({ Answer(text: $0.rawValue)})
+    ),
+]
+
+
+
 enum Gender: String, CaseIterable {
     case female = "Female"
     case male = "Male"
