@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Question {
     var text: String
     var type: ResponseType
@@ -34,8 +33,6 @@ Question(text: "What's Your Age?",
     answers: AgeRange.allCases.map({ Answer(text: $0.rawValue)})
     ),
 ]
-
-
 
 enum Gender: String, CaseIterable {
     case female = "Female"
@@ -199,4 +196,4 @@ case (.male, .a51):
 
 return recServings
     }
-    }
+}

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GenderSelectionViewController.swift
 //  FoodPyramid
 //
 //  Created by Brianna Babcock on 7/28/20.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GenderSelectionViewController: UIViewController {
 
+    @IBOutlet weak var femaleButton: UIButton!
+    @IBOutlet weak var maleButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,4 +20,3 @@ class ViewController: UIViewController {
 
 
 }
-
