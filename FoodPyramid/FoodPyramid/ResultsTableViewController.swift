@@ -10,7 +10,6 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
     
-    
     @IBOutlet weak var calorieLabel: UILabel!
     @IBOutlet weak var fruitLabel: UILabel!
     @IBOutlet weak var vegetableLabel: UILabel!
@@ -40,30 +39,7 @@ class ResultsTableViewController: UITableViewController {
 //        let mostCommonAnswer = frequentAnswerSorted.first!.key
 //
 //        let mostCommonANswer = frequencyOfAnswers.sorted { $0.1 > $1.1}.first!.key
-    
-    
+//    
 //    }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-    // MARK: - Table view data source
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+ 
 }
