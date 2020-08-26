@@ -20,19 +20,8 @@ enum ResponseType {
     
 struct Answer {
     var text: String
+    var type: CalorieIntake
 }
-
-var questions: [Question] = [
-Question(text: "What's Your Gender?",
-    type: .gender,
-    answers: Gender.allCases.map({ Answer(text: $0.rawValue)})
-    ),
-
-Question(text: "What's Your Age?",
-    type: .age,
-    answers: AgeRange.allCases.map({ Answer(text: $0.rawValue)})
-    ),
-]
 
 enum Gender: String, CaseIterable {
     case female = "Female"
@@ -61,15 +50,15 @@ var string: String {
     }
 }
 
-enum FoodPyramid: String {
+enum CalorieIntake: String {
     case f1000 = "Calorie Intake: 1000"
-    case f1200 = "Calorie Intake: 1200"
+    case f1400 = "Calorie Intake: 1400"
     case f1600 = "Calorie Intake: 1600"
     case f2000 = "Calorie Intake: 2000"
     case f2200 = "Calorie Intake: 2200"
     case f1800 = "Calorie Intake: 1800"
     case m1000 = "Calorie Intak = 1000"
-    case m1400 = "Calorie Intake: 1400"
+    case m1400 = "Calorie Intakes: 1400"
     case m1800 = "Calorie Intake = 1800"
     case m2400 = "Calorie Intake: 2400"
     case m2800 = "Calorie Intake: 2800"
@@ -95,98 +84,84 @@ enum ServingSizeKey {
 }
     
 struct Person {
-    var gender: Gender
-    var ageRange: AgeRange
+    var calorieIntake: CalorieIntake
 
-init(gender: Gender, ageRange: AgeRange) {
-    self.gender = gender
-    self.ageRange = ageRange
+    init(calorieIntake: CalorieIntake) {
+    self.calorieIntake = calorieIntake
 }
 
 
 var recommendedServings: [FoodGroups: [ServingSizeKey: Any]] {
 var recServings = [FoodGroups: [ServingSizeKey: Any]]()
 
-switch (gender, ageRange) {
-case (.female, .a2To3):
+switch (calorieIntake) {
+case (.f1000):
     recServings[.fruit] = [ServingSizeKey.quantity: "1", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "1", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.female, .a4To8):
+case (.f1400):
     recServings[.fruit] = [ServingSizeKey.quantity: "1", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "2 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "4", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.female, .a9To13):
+case (.f1600):
     recServings[.fruit] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.female, .a14To18):
+case (.f2000):
     recServings[.fruit] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "2 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "6", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.female, .a19To30):
+case (.f2200):
     recServings[.fruit] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "2 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "6", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "5 1/2", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.female, .a31To50):
-    recServings[.fruit] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
-    recServings[.vegetables] = [ServingSizeKey.quantity: "2 1/2", ServingSizeKey.servingSize: ServingSize.cups]
-    recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
-    recServings[.grain] = [ServingSizeKey.quantity: "6", ServingSizeKey.servingSize: ServingSize.ounces]
-    recServings[.protein] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.female, .a51):
+case (.f1800):
     recServings[.fruit] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
-    case (.male, .a2To3):
+    case (.m1000):
     recServings[.fruit] = [ServingSizeKey.quantity: "1", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "1", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.male, .a4To8):
+case (.m1400):
     recServings[.fruit] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "2 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.male, .a9To13):
+case (.m1800):
     recServings[.fruit] = [ServingSizeKey.quantity: "1 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "2 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "6", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "5", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.male, .a14To18):
+case (.m2400):
     recServings[.fruit] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "8", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "6 1/2", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.male, .a19To30):
+case (.m2800):
     recServings[.fruit] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.grain] = [ServingSizeKey.quantity: "8", ServingSizeKey.servingSize: ServingSize.ounces]
     recServings[.protein] = [ServingSizeKey.quantity: "6 1/2", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.male, .a31To50):
-    recServings[.fruit] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
-    recServings[.vegetables] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
-    recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]
-    recServings[.grain] = [ServingSizeKey.quantity: "7", ServingSizeKey.servingSize: ServingSize.ounces]
-    recServings[.protein] = [ServingSizeKey.quantity: "6", ServingSizeKey.servingSize: ServingSize.ounces]
-case (.male, .a51):
+case (.m2200):
     recServings[.fruit] = [ServingSizeKey.quantity: "2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.vegetables] = [ServingSizeKey.quantity: "2 1/2", ServingSizeKey.servingSize: ServingSize.cups]
     recServings[.dairy] = [ServingSizeKey.quantity: "3", ServingSizeKey.servingSize: ServingSize.cups]

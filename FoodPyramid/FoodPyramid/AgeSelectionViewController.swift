@@ -8,31 +8,35 @@
 
 import UIKit
 
-class AgeSelectionViewController: UIViewController {
-
-    @IBOutlet weak var ageButton2To3: UIButton!
-    @IBOutlet weak var ageButton4To8: UIButton!
-    @IBOutlet weak var ageButton9To13: UIButton!
-    @IBOutlet weak var ageButton14To18: UIButton!
-    @IBOutlet weak var ageButton19To30: UIButton!
-    @IBOutlet weak var ageButton31To50: UIButton!
-    @IBOutlet weak var ageButton51Up: UIButton!
+class AgeSelectionViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var ageStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var ageQuestion: [Question] = [
+    Question(text: "What's Your Age?",
+        type: .age,
+        answers: AgeRange.allCases.map({ Answer(text: $0.rawValue)})
+        ),
+    ]
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        AgeRange.allCases.count
     }
-    */
-
+    
+    func ageRange(for indexPath: IndexPath) -> AgeRange {
+        AgeRange.allCases[indexPath.row]
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ageCell", for: indexPath)
+        cell.detailTextLabel?.text = ageRange(for: indexPath).rawValue
+        return cell
+    }
+    
 }
