@@ -12,17 +12,21 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
+    var result: Calories?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    
     
     struct Question {
         var text: String
         var answers: [Answer]
     }
     
-    var quizQuestions: [Question] = [
+    var quizQuestion: Question =
         Question(text: "What Best Describes You?",
                  answers: [
                     Answer(text: "Female, Age 2-3", type: .f1000),
@@ -41,7 +45,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
                     Answer(text: "Male, Age 51+", type: .m2200)
                     
             ]
-        ) ]
+        )
     
     enum Person: String, CaseIterable {
         case Fa2To3 = "Female, Age 2-3"
@@ -61,17 +65,28 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Person.allCases.count
+        quizQuestion.answers.count
     }
     
-    func person(for indexPath: IndexPath) -> Person {
-        Person.allCases[indexPath.row]
+    func answer(for indexPath: IndexPath) -> Answer {
+        quizQuestion.answers[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
-        cell.textLabel?.text = person(for: indexPath).rawValue
+        cell.textLabel?.text = answer(for: indexPath).text
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        result = Calories(calorieIntake: answer(for: indexPath).type)
+        self.performSegue(withIdentifier: "resultsSegue", sender: self)
+    }
+    
+override func prepare(for segue: UIStoryboardSegue, sender:
+      Any?) {
+    if let destinationVC = segue.destination as? ResultsTableViewController, let result = result{
+        destinationVC.calories = result
+        }
+    }
 }

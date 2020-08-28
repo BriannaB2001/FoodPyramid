@@ -8,6 +8,17 @@
 
 import Foundation
 
+var answerChosen: [Answer] = []
+
+
+
+
+
+
+
+
+
+
 //struct QuizManager {
 //    
 //    static let shared = QuizManager()
