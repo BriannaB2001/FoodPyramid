@@ -27,9 +27,8 @@ class ResultsTableViewController: UITableViewController {
         dairyLabel.text = calories.recommendedServings[.dairy]?[ServingSize.quantity] as? String
         grainsLabel.text = calories.recommendedServings[.grain]?[ServingSize.quantity] as? String
         proteinLabel.text = calories.recommendedServings[.protein]?[ServingSize.quantity] as? String
+        calorieLabel.text = calories.recommendedServings[.calorie]?[ServingSize.calories] as? String
         
         //calculatePersonalityResult()
     }
-        
- 
 }

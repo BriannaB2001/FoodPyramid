@@ -45,24 +45,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
                     Answer(text: "Male, Age 51+", type: .m2200)
                     
             ]
-        )
-    
-    enum Person: String, CaseIterable {
-        case Fa2To3 = "Female, Age 2-3"
-        case Fa4To8 = "Female, Age 4-8"
-        case Fa9To13 = "Female, Age 9-13"
-        case Fa14To18 = "Female, Age 14-18"
-        case Fa19To30 = "Female, Age 19-30"
-        case Fa31To50 = "Female, Age 31-50"
-        case Fa51 = "Female, Age 51+"
-        case Ma2To3 = "Male, Age 2-3"
-        case Ma4To8 = "Male, Age 4-8"
-        case Ma9To13 = "Male, Age 9-13"
-        case Ma14To18 = "Male, Age 14-18"
-        case Ma19To30 = "Male, Age 19-30"
-        case Ma31To50 = "Male, Age 31-50"
-        case Ma51 = "Male, Age 51+"
-    }
+    )
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         quizQuestion.answers.count
@@ -83,10 +66,10 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         self.performSegue(withIdentifier: "resultsSegue", sender: self)
     }
     
-override func prepare(for segue: UIStoryboardSegue, sender:
-      Any?) {
-    if let destinationVC = segue.destination as? ResultsTableViewController, let result = result{
-        destinationVC.calories = result
+    override func prepare(for segue: UIStoryboardSegue, sender:
+        Any?) {
+        if let destinationVC = segue.destination as? ResultsTableViewController, let result = result{
+            destinationVC.calories = result
         }
     }
 }
