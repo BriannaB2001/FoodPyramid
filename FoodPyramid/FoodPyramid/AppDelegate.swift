@@ -12,10 +12,18 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let notificationCenter = UNUserNotificationCenter.current()
     
+    
+    
+    
+    
+    
+    
+
+    let notificationCenter = UNUserNotificationCenter.current()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         notificationCenter.requestAuthorization(options: options) {
             (didAllow, error) in
@@ -24,6 +32,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
 
+        notificationCenter.getNotificationSettings { (settings) in
+          if settings.authorizationStatus != .authorized {
+          }
+        }
+//fixthis
+        func scheduleNotification(notificationType: String) {
+
+            let content = UNMutableNotificationContent()
+
+            content.title = notificationType
+//            content.body = "Will You Allow Eat Me To Send You Daily Reminders To Eat Healthier? " + notificationType Notifications"
+            content.sound = UNNotificationSound.default
+            content.badge = 1
+        }
+        
+        let date = Date(timeIntervalSinceNow: 3600)
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+
+        
+        
+        
+        
+
+        
+        
         return true
     }
     

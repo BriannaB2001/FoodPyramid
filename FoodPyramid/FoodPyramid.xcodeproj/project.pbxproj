@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA40427924FFDE1900D61B61 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40427824FFDE1900D61B61 /* AlertNotification.swift */; };
 		DA42630C24FE8DF00091626E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42630B24FE8DF00091626E /* Notification.swift */; };
 		DA96FBDB24D1CCD100839E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA96FBDA24D1CCD100839E3D /* Assets.xcassets */; };
 		DACDCC4224F56A2100CAA58D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA40427824FFDE1900D61B61 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		DA42630B24FE8DF00091626E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		DA96FBDA24D1CCD100839E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */,
 				DAEF47E824D31E2400D67A04 /* ResultsTableViewController.swift */,
 				DA42630B24FE8DF00091626E /* Notification.swift */,
+				DA40427824FFDE1900D61B61 /* AlertNotification.swift */,
 				DAE94A1624D0719200A27B1C /* Info.plist */,
 				DA96FBDA24D1CCD100839E3D /* Assets.xcassets */,
 				DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 				DAEF47E924D31E2400D67A04 /* ResultsTableViewController.swift in Sources */,
 				DACDCC4224F56A2100CAA58D /* QuestionViewController.swift in Sources */,
 				DA42630C24FE8DF00091626E /* Notification.swift in Sources */,
+				DA40427924FFDE1900D61B61 /* AlertNotification.swift in Sources */,
 				DAE94A0924D0719100A27B1C /* AppDelegate.swift in Sources */,
 				DAEF47E724D3123E00D67A04 /* QuestionData.swift in Sources */,
 				DAE94A0B24D0719100A27B1C /* SceneDelegate.swift in Sources */,
