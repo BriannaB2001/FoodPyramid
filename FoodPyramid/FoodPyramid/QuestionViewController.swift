@@ -11,15 +11,13 @@ import UIKit
 class QuestionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var result: Calories?
+
+    var quizCompleted: (([Answer], Calories) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
-    
     
     struct Question {
         var text: String
@@ -62,14 +60,6 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        result = Calories(calorieIntake: answer(for: indexPath).type)
-        self.performSegue(withIdentifier: "resultsSegue", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender:
-        Any?) {
-        if let destinationVC = segue.destination as? ResultsTableViewController, let result = result{
-            destinationVC.calories = result
-        }
+        quizCompleted?([], Calories(calorieIntake: answer(for: indexPath).type))
     }
 }
