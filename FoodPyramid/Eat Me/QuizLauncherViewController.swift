@@ -18,7 +18,10 @@ class QuizLauncherViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+           super.viewDidAppear(animated)
+           AlertManager.requestAuthorizationIfNeeded(onViewController: self)
+       }
     
      //MARK: - Navigation
 

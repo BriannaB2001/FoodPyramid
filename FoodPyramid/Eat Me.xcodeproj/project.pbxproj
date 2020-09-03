@@ -32,7 +32,7 @@
 		DA42630B24FE8DF00091626E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		DA96FBDA24D1CCD100839E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		DAE94A0524D0719100A27B1C /* FoodPyramid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPyramid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE94A0524D0719100A27B1C /* Eat Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE94A0824D0719100A27B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE94A0A24D0719100A27B1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DAE94A0F24D0719100A27B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		DAE949FC24D0719100A27B1C = {
 			isa = PBXGroup;
 			children = (
-				DAE94A0724D0719100A27B1C /* FoodPyramid */,
+				DAE94A0724D0719100A27B1C /* Eat Me */,
 				DAE94A0624D0719100A27B1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,12 +64,12 @@
 		DAE94A0624D0719100A27B1C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAE94A0524D0719100A27B1C /* FoodPyramid.app */,
+				DAE94A0524D0719100A27B1C /* Eat Me.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DAE94A0724D0719100A27B1C /* FoodPyramid */ = {
+		DAE94A0724D0719100A27B1C /* Eat Me */ = {
 			isa = PBXGroup;
 			children = (
 				DAE94A0824D0719100A27B1C /* AppDelegate.swift */,
@@ -89,7 +89,7 @@
 				DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */,
 				DAE94A1C24D0734B00A27B1C /* Misc */,
 			);
-			path = FoodPyramid;
+			path = "Eat Me";
 			sourceTree = "<group>";
 		};
 		DAE94A1C24D0734B00A27B1C /* Misc */ = {
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DAE94A0424D0719100A27B1C /* FoodPyramid */ = {
+		DAE94A0424D0719100A27B1C /* Eat Me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE94A1924D0719200A27B1C /* Build configuration list for PBXNativeTarget "FoodPyramid" */;
+			buildConfigurationList = DAE94A1924D0719200A27B1C /* Build configuration list for PBXNativeTarget "Eat Me" */;
 			buildPhases = (
 				DAE94A0124D0719100A27B1C /* Sources */,
 				DAE94A0224D0719100A27B1C /* Frameworks */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = FoodPyramid;
+			name = "Eat Me";
 			productName = FoodPyramid;
-			productReference = DAE94A0524D0719100A27B1C /* FoodPyramid.app */;
+			productReference = DAE94A0524D0719100A27B1C /* Eat Me.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DAE94A0024D0719100A27B1C /* Build configuration list for PBXProject "FoodPyramid" */;
+			buildConfigurationList = DAE94A0024D0719100A27B1C /* Build configuration list for PBXProject "Eat Me" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAE94A0424D0719100A27B1C /* FoodPyramid */,
+				DAE94A0424D0719100A27B1C /* Eat Me */,
 			);
 		};
 /* End PBXProject section */
@@ -326,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJC36V2HHJ;
-				INFOPLIST_FILE = FoodPyramid/Info.plist;
+				INFOPLIST_FILE = "Eat Me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJC36V2HHJ;
-				INFOPLIST_FILE = FoodPyramid/Info.plist;
+				INFOPLIST_FILE = "Eat Me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,7 +359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DAE94A0024D0719100A27B1C /* Build configuration list for PBXProject "FoodPyramid" */ = {
+		DAE94A0024D0719100A27B1C /* Build configuration list for PBXProject "Eat Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE94A1724D0719200A27B1C /* Debug */,
@@ -368,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAE94A1924D0719200A27B1C /* Build configuration list for PBXNativeTarget "FoodPyramid" */ = {
+		DAE94A1924D0719200A27B1C /* Build configuration list for PBXNativeTarget "Eat Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE94A1A24D0719200A27B1C /* Debug */,
