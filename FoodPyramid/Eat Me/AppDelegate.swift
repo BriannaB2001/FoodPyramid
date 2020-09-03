@@ -11,14 +11,6 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    
-    
-    
-    
-    
-    
-    
 
     let notificationCenter = UNUserNotificationCenter.current()
 
@@ -31,33 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("User has declined notifications")
             }
         }
-
-        notificationCenter.getNotificationSettings { (settings) in
-          if settings.authorizationStatus != .authorized {
-          }
-        }
-//fixthis
-        func scheduleNotification(notificationType: String) {
-
-            let content = UNMutableNotificationContent()
-
-            content.title = notificationType
-//            content.body = "Will You Allow Eat Me To Send You Daily Reminders To Eat Healthier? " + notificationType Notifications"
-            content.sound = UNNotificationSound.default
-            content.badge = 1
-        }
-        
-        let date = Date(timeIntervalSinceNow: 3600)
-        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
-
-        
-        
-        
-        
-
-        
-        
         return true
     }
     
