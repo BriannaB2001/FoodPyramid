@@ -17,6 +17,12 @@ class AlertManager {
             showNotificationPrePrompt(onViewController: viewController, allowed: {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
                     
+                    if granted {
+                        Notify.eatHealthyBreakfast()
+                        Notify.eatHealthyLunch()
+                        Notify.eatHealthySnack()
+                        Notify.eatHealthyDinner()
+                    }
                     
                     print(granted, error as Any)
                 }
