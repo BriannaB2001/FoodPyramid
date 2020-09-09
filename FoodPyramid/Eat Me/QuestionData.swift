@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Answer {
+struct Answer: Codable {
     var text: String
     var type: CalorieIntake
 }
 
-enum FoodGroups: String {
+enum FoodGroups: String, Codable {
     case fruit = "Fruit"
     case vegetables = "Vegetables"
     case dairy = "Dairy"
@@ -26,7 +26,7 @@ enum FoodGroups: String {
     }
 }
 
-enum CalorieIntake: String {
+enum CalorieIntake: String, Codable {
     case f1000
     case f1400
     case f1600
@@ -45,12 +45,12 @@ enum CalorieIntake: String {
     }
 }
 
-enum ServingSize {
+enum ServingSize: String, Codable {
     case quantity
     case calories
 }
 
-struct Calories {
+struct Calories: Codable {
     var calorieIntake: CalorieIntake
     
     init(calorieIntake: CalorieIntake) {

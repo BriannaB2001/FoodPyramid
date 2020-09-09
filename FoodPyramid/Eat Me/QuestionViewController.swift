@@ -41,7 +41,6 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
                     Answer(text: "Male, Age 19-30", type: .m2800),
                     Answer(text: "Male, Age 31-50", type: .m2400),
                     Answer(text: "Male, Age 51+", type: .m2200)
-                    
             ]
     )
     

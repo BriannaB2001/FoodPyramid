@@ -31,9 +31,8 @@ class MasterViewController: UIViewController {
         _ = quizLauncherViewController
         _ = resultsViewController
         
-        if loadData() != nil {
-            quizViewOutlet.isHidden = true
-            resultsViewOutlet.isHidden = false
+        if let (calories, answers) = loadData() {
+            quizCompleted(answers: answers, calories: calories)
         } else {
             quizViewOutlet.isHidden = false
             resultsViewOutlet.isHidden = true
@@ -44,6 +43,8 @@ class MasterViewController: UIViewController {
     }
     
     func quizCompleted(answers: [Answer], calories: Calories) {
+        Defaults.calories = calories
+        Defaults.answers = answers
         resultsViewController.responses = answers
         resultsViewController.updateUI(calories: calories)
         resultsViewOutlet.isHidden = false
@@ -51,18 +52,10 @@ class MasterViewController: UIViewController {
     }
     
     func loadData() -> (Calories, [Answer])? {
+        if let calories = Defaults.calories, let answers = Defaults.answers {
+            return (calories, answers)
+        }
         return nil
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

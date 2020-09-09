@@ -207,6 +207,29 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Personalized Food Pyramid" id="cGr-77-e1t">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="Yhg-yG-Rz8">
+                                        <rect key="frame" x="0.0" y="345.5" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yhg-yG-Rz8" id="vI0-Mb-Zhg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnb-N9-SNE">
+                                                    <rect key="frame" x="50" y="5" width="314" height="30"/>
+                                                    <state key="normal" title="Retake Quiz"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vnb-N9-SNE" firstAttribute="centerX" secondItem="vI0-Mb-Zhg" secondAttribute="centerX" id="3NB-qx-WuU"/>
+                                                <constraint firstAttribute="trailing" secondItem="vnb-N9-SNE" secondAttribute="trailing" constant="50" id="Chy-wV-H1v"/>
+                                                <constraint firstItem="vnb-N9-SNE" firstAttribute="leading" secondItem="vI0-Mb-Zhg" secondAttribute="leading" constant="50" id="vsa-fa-RA8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="xR0-bQ-Xhf" id="HXr-Y8-v2v"/>
@@ -225,7 +248,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vR-IX-sGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4784.057971014493" y="87.723214285714278"/>
+            <point key="canvasLocation" x="736" y="147"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rt1-Gf-8yD">
@@ -243,7 +266,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="252-rR-r84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4055" y="88"/>
+            <point key="canvasLocation" x="6" y="147"/>
         </scene>
     </scenes>
 </document>
