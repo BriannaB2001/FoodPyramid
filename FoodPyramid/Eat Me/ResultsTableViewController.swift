@@ -34,4 +34,12 @@ class ResultsTableViewController: UITableViewController {
         proteinLabel.text = calories.recommendedServings[.protein]?[ServingSize.quantity] as? String
         calorieLabel.text = calories.recommendedServings[.calorie]?[ServingSize.calories] as? String
     }
+    
+    @IBAction func retakeQuizButtonPressed(_ sender: Any) {
+        
+        // fire notification through notification center
+        //NotificationCenter.default.post ish
+        
+    }
+    
 }

@@ -219,6 +219,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnb-N9-SNE">
                                                     <rect key="frame" x="50" y="5" width="314" height="30"/>
                                                     <state key="normal" title="Retake Quiz"/>
+                                                    <connections>
+                                                        <action selector="retakeQuizButtonPressed:" destination="xR0-bQ-Xhf" eventType="touchUpInside" id="opN-7n-AQ8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

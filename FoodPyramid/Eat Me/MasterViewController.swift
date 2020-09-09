@@ -10,6 +10,9 @@ import UIKit
 
 class MasterViewController: UIViewController {
 
+    
+    
+    
     @IBOutlet weak var quizViewOutlet: UIView!
     @IBOutlet weak var resultsViewOutlet: UIView!
     
@@ -28,6 +31,13 @@ class MasterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //observe notifications firing
+        //when notification fires, hook up to func
+        // func will be else statementbelow
+        // hide result view, unhide quiz view
+        
+        
         _ = quizLauncherViewController
         _ = resultsViewController
         
