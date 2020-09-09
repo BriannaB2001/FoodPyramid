@@ -13,7 +13,7 @@
 		DA0A0EEC2500002A00DCA21F /* QuizLauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0EEB2500002A00DCA21F /* QuizLauncherViewController.swift */; };
 		DA40427924FFDE1900D61B61 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40427824FFDE1900D61B61 /* AlertNotification.swift */; };
 		DA42630C24FE8DF00091626E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42630B24FE8DF00091626E /* Notification.swift */; };
-		DA686CB02509190200918356 /* Defaults.Swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686CAF2509190200918356 /* Defaults.Swift */; };
+		DA686CB22509338800918356 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686CB12509338800918356 /* UserDefaultsHelper.swift */; };
 		DA96FBDB24D1CCD100839E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA96FBDA24D1CCD100839E3D /* Assets.xcassets */; };
 		DACDCC4224F56A2100CAA58D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */; };
 		DAE94A0924D0719100A27B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE94A0824D0719100A27B1C /* AppDelegate.swift */; };
@@ -31,7 +31,7 @@
 		DA0A0EEB2500002A00DCA21F /* QuizLauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLauncherViewController.swift; sourceTree = "<group>"; };
 		DA40427824FFDE1900D61B61 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		DA42630B24FE8DF00091626E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		DA686CAF2509190200918356 /* Defaults.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.Swift; sourceTree = "<group>"; };
+		DA686CB12509338800918356 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		DA96FBDA24D1CCD100839E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		DAE94A0524D0719100A27B1C /* Eat Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +87,7 @@
 				DA42630B24FE8DF00091626E /* Notification.swift */,
 				DA40427824FFDE1900D61B61 /* AlertNotification.swift */,
 				DAE94A1624D0719200A27B1C /* Info.plist */,
-				DA686CAF2509190200918356 /* Defaults.Swift */,
+				DA686CB12509338800918356 /* UserDefaultsHelper.swift */,
 				DA96FBDA24D1CCD100839E3D /* Assets.xcassets */,
 				DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */,
 				DAE94A1C24D0734B00A27B1C /* Misc */,
@@ -181,7 +181,7 @@
 				DA42630C24FE8DF00091626E /* Notification.swift in Sources */,
 				DA40427924FFDE1900D61B61 /* AlertNotification.swift in Sources */,
 				DAE94A0924D0719100A27B1C /* AppDelegate.swift in Sources */,
-				DA686CB02509190200918356 /* Defaults.Swift in Sources */,
+				DA686CB22509338800918356 /* UserDefaultsHelper.swift in Sources */,
 				DAEF47E724D3123E00D67A04 /* QuestionData.swift in Sources */,
 				DAE94A0B24D0719100A27B1C /* SceneDelegate.swift in Sources */,
 				DA0A0EEC2500002A00DCA21F /* QuizLauncherViewController.swift in Sources */,

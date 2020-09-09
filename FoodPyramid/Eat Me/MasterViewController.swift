@@ -32,6 +32,7 @@ class MasterViewController: UIViewController {
         _ = resultsViewController
         
         if let (calories, answers) = loadData() {
+            resultsViewController.loadViewIfNeeded()
             quizCompleted(answers: answers, calories: calories)
         } else {
             quizViewOutlet.isHidden = false
