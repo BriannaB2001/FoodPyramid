@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
 
     var quizCompleted: (([Answer], Calories) -> Void)?
@@ -60,5 +61,17 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         quizCompleted?([], Calories(calorieIntake: answer(for: indexPath).type))
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        //performSegue(withIdentifier: "QuizToResults", sender: self)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "QuizToResults" {
+            guard let vc2 = segue.destination as? ResultsTableViewController else { return }
+            
+        }
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
     
+    @IBOutlet weak var retakeQuizButton: UIButton!
     @IBOutlet weak var calorieLabel: UILabel!
     @IBOutlet weak var fruitLabel: UILabel!
     @IBOutlet weak var vegetableLabel: UILabel!
@@ -37,9 +38,18 @@ class ResultsTableViewController: UITableViewController {
     
     @IBAction func retakeQuizButtonPressed(_ sender: Any) {
         
+        performSegue(withIdentifier: "GoToQuizOpener", sender: self)
+        
+        
         // fire notification through notification center
         //NotificationCenter.default.post ish
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToQuizOpener" {
+            guard let vc = segue.destination as? QuizLauncherViewController else { return }
+        }
     }
     
 }

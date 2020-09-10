@@ -9,9 +9,6 @@
 import UIKit
 
 class MasterViewController: UIViewController {
-
-    
-    
     
     @IBOutlet weak var quizViewOutlet: UIView!
     @IBOutlet weak var resultsViewOutlet: UIView!
@@ -48,9 +45,6 @@ class MasterViewController: UIViewController {
             quizViewOutlet.isHidden = false
             resultsViewOutlet.isHidden = true
         }
-
-        
-        // Do any additional setup after loading the view.
     }
     
     func quizCompleted(answers: [Answer], calories: Calories) {
