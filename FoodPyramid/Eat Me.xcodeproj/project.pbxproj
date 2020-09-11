@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA0A0EE624FFF76000DCA21F /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0A0EE524FFF76000DCA21F /* Quiz.storyboard */; };
 		DA0A0EE824FFF8E300DCA21F /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0A0EE724FFF8E300DCA21F /* Results.storyboard */; };
-		DA0A0EEA24FFFB8300DCA21F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0EE924FFFB8300DCA21F /* MasterViewController.swift */; };
 		DA0A0EEC2500002A00DCA21F /* QuizLauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0EEB2500002A00DCA21F /* QuizLauncherViewController.swift */; };
 		DA40427924FFDE1900D61B61 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40427824FFDE1900D61B61 /* AlertNotification.swift */; };
 		DA42630C24FE8DF00091626E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42630B24FE8DF00091626E /* Notification.swift */; };
@@ -18,7 +17,6 @@
 		DACDCC4224F56A2100CAA58D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */; };
 		DAE94A0924D0719100A27B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE94A0824D0719100A27B1C /* AppDelegate.swift */; };
 		DAE94A0B24D0719100A27B1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE94A0A24D0719100A27B1C /* SceneDelegate.swift */; };
-		DAE94A1024D0719100A27B1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE94A0E24D0719100A27B1C /* Main.storyboard */; };
 		DAE94A1524D0719200A27B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */; };
 		DAEF47E724D3123E00D67A04 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF47E624D3123E00D67A04 /* QuestionData.swift */; };
 		DAEF47E924D31E2400D67A04 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF47E824D31E2400D67A04 /* ResultsTableViewController.swift */; };
@@ -27,7 +25,6 @@
 /* Begin PBXFileReference section */
 		DA0A0EE524FFF76000DCA21F /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
 		DA0A0EE724FFF8E300DCA21F /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
-		DA0A0EE924FFFB8300DCA21F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		DA0A0EEB2500002A00DCA21F /* QuizLauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLauncherViewController.swift; sourceTree = "<group>"; };
 		DA40427824FFDE1900D61B61 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		DA42630B24FE8DF00091626E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -37,7 +34,6 @@
 		DAE94A0524D0719100A27B1C /* Eat Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE94A0824D0719100A27B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE94A0A24D0719100A27B1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAE94A0F24D0719100A27B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE94A1424D0719200A27B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE94A1624D0719200A27B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAEF47E624D3123E00D67A04 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
@@ -76,10 +72,8 @@
 			children = (
 				DAE94A0824D0719100A27B1C /* AppDelegate.swift */,
 				DAE94A0A24D0719100A27B1C /* SceneDelegate.swift */,
-				DAE94A0E24D0719100A27B1C /* Main.storyboard */,
 				DA0A0EE524FFF76000DCA21F /* Quiz.storyboard */,
 				DA0A0EE724FFF8E300DCA21F /* Results.storyboard */,
-				DA0A0EE924FFFB8300DCA21F /* MasterViewController.swift */,
 				DA0A0EEB2500002A00DCA21F /* QuizLauncherViewController.swift */,
 				DAEF47E624D3123E00D67A04 /* QuestionData.swift */,
 				DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */,
@@ -163,7 +157,6 @@
 				DA96FBDB24D1CCD100839E3D /* Assets.xcassets in Resources */,
 				DA0A0EE824FFF8E300DCA21F /* Results.storyboard in Resources */,
 				DAE94A1524D0719200A27B1C /* LaunchScreen.storyboard in Resources */,
-				DAE94A1024D0719100A27B1C /* Main.storyboard in Resources */,
 				DA0A0EE624FFF76000DCA21F /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +168,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA0A0EEA24FFFB8300DCA21F /* MasterViewController.swift in Sources */,
 				DAEF47E924D31E2400D67A04 /* ResultsTableViewController.swift in Sources */,
 				DACDCC4224F56A2100CAA58D /* QuestionViewController.swift in Sources */,
 				DA42630C24FE8DF00091626E /* Notification.swift in Sources */,
@@ -191,14 +183,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DAE94A0E24D0719100A27B1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAE94A0F24D0719100A27B1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

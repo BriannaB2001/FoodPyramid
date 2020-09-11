@@ -11,8 +11,6 @@ import UIKit
 class QuestionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-
-    var quizCompleted: (([Answer], Calories) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()

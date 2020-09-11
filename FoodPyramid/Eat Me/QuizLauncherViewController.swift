@@ -9,8 +9,6 @@
 import UIKit
 
 class QuizLauncherViewController: UIViewController {
-
-    var quizCompleted: (([Answer], Calories) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +26,4 @@ class QuizLauncherViewController: UIViewController {
            AlertManager.requestAuthorizationIfNeeded(onViewController: self)
        }
     
-     //MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let questionViewController = segue.destination as? QuestionViewController {
-            questionViewController.quizCompleted = self.quizCompleted
-        }
-    }
-    
-
 }
