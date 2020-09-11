@@ -27,13 +27,7 @@ class MasterViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //observe notifications firing
-        //when notification fires, hook up to func
-        // func will be else statementbelow
-        // hide result view, unhide quiz view
-        
+        super.viewDidLoad()        
         
         _ = quizLauncherViewController
         _ = resultsViewController

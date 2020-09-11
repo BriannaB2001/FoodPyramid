@@ -14,8 +14,13 @@ class QuizLauncherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if let calories = Defaults.calories {
+            guard let resultsController = UIStoryboard(name: "Results", bundle: nil).instantiateViewController(withIdentifier: "QuizToResults") as? ResultsTableViewController else { return }
+            
+            resultsController.calories = calories
+            
+            present(resultsController, animated: true, completion: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -25,7 +30,6 @@ class QuizLauncherViewController: UIViewController {
     
      //MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let questionViewController = segue.destination as? QuestionViewController {
             questionViewController.quizCompleted = self.quizCompleted

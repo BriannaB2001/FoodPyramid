@@ -23,7 +23,9 @@ class ResultsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //calculatePersonalityResult()
+        if let calories = calories {
+            updateUI(calories: calories)
+        }
     }
     
     func updateUI(calories: Calories) {
@@ -38,12 +40,7 @@ class ResultsTableViewController: UITableViewController {
     
     @IBAction func retakeQuizButtonPressed(_ sender: Any) {
         
-        performSegue(withIdentifier: "GoToQuizOpener", sender: self)
-        
-        
-        // fire notification through notification center
-        //NotificationCenter.default.post ish
-        
+        dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

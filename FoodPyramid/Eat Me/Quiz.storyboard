@@ -127,31 +127,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nXh-BW-X3e"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cb1-DG-g1h">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZZi-K6-VJ0">
-                            <connections>
-                                <segue destination="ZgN-Ho-SXk" kind="show" identifier="QuizToResults" id="EJD-5v-AAW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Cb1-DG-g1h"/>
                     <connections>
-                        <outlet property="saveButton" destination="ZZi-K6-VJ0" id="8C7-fO-JFc"/>
                         <outlet property="tableView" destination="zyk-8V-YjM" id="S7p-xL-EYp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdb-0f-b6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4968.115942028986" y="103.79464285714285"/>
-        </scene>
-        <!--QuizToResults-->
-        <scene sceneID="xQb-Jq-gGn">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Results" referencedIdentifier="QuizToResults" id="ZgN-Ho-SXk" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="NyJ-lb-lPN"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eai-PB-DXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5639" y="7"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W8w-zg-60C">
