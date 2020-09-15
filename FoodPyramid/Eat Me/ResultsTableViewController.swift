@@ -27,6 +27,8 @@ class ResultsTableViewController: UITableViewController {
         }
     }
     
+    //Sets the labels text equal to the specific food groups reccomened serving size/quantity
+    
     func updateUI(calories: Calories) {
         self.calories = calories
         fruitLabel.text = calories.recommendedServings[.fruit]?[ServingSize.quantity] as? String
@@ -37,11 +39,14 @@ class ResultsTableViewController: UITableViewController {
         calorieLabel.text = calories.recommendedServings[.calorie]?[ServingSize.calories] as? String
     }
     
+    
+    // dimsisses results view
     @IBAction func retakeQuizButtonPressed(_ sender: Any) {
-        
         dismiss(animated: true, completion: nil)
     }
     
+    
+    // segue to go to beginning of qiz again
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GoToQuizOpener" {
             guard let vc = segue.destination as? QuizLauncherViewController else { return }

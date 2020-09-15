@@ -22,6 +22,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         var answers: [Answer]
     }
     
+    // quiz questions, and their corresponding answers
     var quizQuestion: Question =
         Question(text: "What Best Describes You?",
                  answers: [
@@ -42,27 +43,29 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
             ]
     )
     
+    //number of rows in section, obviously
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         quizQuestion.answers.count
     }
     
+    // where each answers is displayed
     func answer(for indexPath: IndexPath) -> Answer {
         quizQuestion.answers[indexPath.row]
     }
     
+    //displays the answers on the cells/rows
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
         cell.textLabel?.text = answer(for: indexPath).text
         return cell
     }
     
+    // tells the row that its selected, and moves it to the next storyboard
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //quizCompleted?([], Calories(calorieIntake: answer(for: indexPath).type))
         
         let calories = Calories(calorieIntake: answer(for: indexPath).type)
         
         Defaults.calories = calories
-       // Defaults.answers = answers
         
         guard let resultsController = UIStoryboard(name: "Results", bundle: nil).instantiateViewController(withIdentifier: "QuizToResults") as? ResultsTableViewController else { return }
         
@@ -73,7 +76,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-    
+    // segues from quiz to results storyboard
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "QuizToResults" {
             guard let vc2 = segue.destination as? ResultsTableViewController else { return }

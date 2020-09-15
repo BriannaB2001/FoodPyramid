@@ -10,6 +10,7 @@ import Foundation
 
 class Defaults {
     
+    // saves the answer/inputData that they select, and then saves the results/outputData that is shown
     static var answers: [Answer]? {
         get {
             guard let data = UserDefaults.standard.data(forKey: #function) else { return nil }
