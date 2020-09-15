@@ -207,16 +207,16 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Personalized Food Pyramid" id="cGr-77-e1t">
+                            <tableViewSection headerTitle="Personalized Food Pyramid" id="fby-Un-tXY">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="Yhg-yG-Rz8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="dev-PN-HZu">
                                         <rect key="frame" x="0.0" y="345.5" width="414" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yhg-yG-Rz8" id="vI0-Mb-Zhg">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dev-PN-HZu" id="AWk-Z9-gah">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnb-N9-SNE">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEw-Lx-aCR">
                                                     <rect key="frame" x="50" y="5" width="314" height="30"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -224,16 +224,16 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="retakeQuizButtonPressed:" destination="xR0-bQ-Xhf" eventType="touchUpInside" id="opN-7n-AQ8"/>
+                                                        <action selector="retakeQuizButtonPressed:" destination="xR0-bQ-Xhf" eventType="touchUpInside" id="n9r-Y5-mtU"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="vnb-N9-SNE" firstAttribute="centerX" secondItem="vI0-Mb-Zhg" secondAttribute="centerX" id="3NB-qx-WuU"/>
-                                                <constraint firstAttribute="trailing" secondItem="vnb-N9-SNE" secondAttribute="trailing" constant="50" id="Chy-wV-H1v"/>
-                                                <constraint firstItem="vnb-N9-SNE" firstAttribute="top" secondItem="vI0-Mb-Zhg" secondAttribute="topMargin" constant="-6" id="OYT-zI-Hkj"/>
-                                                <constraint firstItem="vnb-N9-SNE" firstAttribute="leading" secondItem="vI0-Mb-Zhg" secondAttribute="leading" constant="50" id="vsa-fa-RA8"/>
-                                                <constraint firstItem="vnb-N9-SNE" firstAttribute="centerY" secondItem="vI0-Mb-Zhg" secondAttribute="centerY" id="zBP-d3-Rgd"/>
+                                                <constraint firstItem="LEw-Lx-aCR" firstAttribute="top" secondItem="AWk-Z9-gah" secondAttribute="topMargin" constant="-6" id="IGL-9J-f4u"/>
+                                                <constraint firstAttribute="trailing" secondItem="LEw-Lx-aCR" secondAttribute="trailing" constant="50" id="OKI-6s-vEu"/>
+                                                <constraint firstItem="LEw-Lx-aCR" firstAttribute="centerX" secondItem="AWk-Z9-gah" secondAttribute="centerX" id="UqZ-qH-xb0"/>
+                                                <constraint firstItem="LEw-Lx-aCR" firstAttribute="centerY" secondItem="AWk-Z9-gah" secondAttribute="centerY" id="hfl-uc-vgk"/>
+                                                <constraint firstItem="LEw-Lx-aCR" firstAttribute="leading" secondItem="AWk-Z9-gah" secondAttribute="leading" constant="50" id="xPj-eX-kdM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.77285167509999997" green="1" blue="0.76971332290000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -253,7 +253,6 @@
                         <outlet property="fruitLabel" destination="565-QL-mjO" id="9Lt-sP-whx"/>
                         <outlet property="grainsLabel" destination="PPb-ml-Zpm" id="Uys-QK-QJ4"/>
                         <outlet property="proteinLabel" destination="FJP-7p-MHe" id="fTR-Wk-6jy"/>
-                        <outlet property="retakeQuizButton" destination="vnb-N9-SNE" id="UPe-FC-QPS"/>
                         <outlet property="vegetableLabel" destination="Pfj-Y9-SDV" id="fr0-cF-sLU"/>
                         <segue destination="nfa-pk-kTr" kind="show" identifier="GoToQuizOpener" id="pmn-Z7-x1K"/>
                     </connections>
@@ -270,7 +269,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osf-Gh-cAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="116"/>
+            <point key="canvasLocation" x="1417" y="85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rt1-Gf-8yD">

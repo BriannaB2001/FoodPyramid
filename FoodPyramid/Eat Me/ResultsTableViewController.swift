@@ -10,7 +10,6 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
     
-    @IBOutlet weak var retakeQuizButton: UIButton!
     @IBOutlet weak var calorieLabel: UILabel!
     @IBOutlet weak var fruitLabel: UILabel!
     @IBOutlet weak var vegetableLabel: UILabel!

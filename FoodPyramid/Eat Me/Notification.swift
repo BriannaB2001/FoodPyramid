@@ -16,7 +16,7 @@ struct Notify {
         
         let content = UNMutableNotificationContent()
         content.title = "Remember To Eat Healthy"
-        content.body = "Have some milk and fruit with your breakfast this morning! "
+        content.body = "Have some milk and fruit with your breakfast this morning!"
         content.sound = UNNotificationSound.default
         
         var dateComponents = DateComponents()
@@ -54,8 +54,8 @@ struct Notify {
         content.sound = UNNotificationSound.default
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 4
-        dateComponents.minute = 00
+        dateComponents.hour = 3
+        dateComponents.minute = 30
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
