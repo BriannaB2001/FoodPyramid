@@ -47,10 +47,33 @@ class ResultsTableViewController: UITableViewController {
     
     // segue to go to beginning of qiz again
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToQuizOpener" {
-            guard let vc = segue.destination as? QuizLauncherViewController else { return }
+        switch segue.identifier {
+        case "GoToQuizOpener":
+           guard let vc = segue.destination as? QuizLauncherViewController else { return }
+        case "FruitToView":
+            guard let vc = segue.destination as? EqualCupViewController else { return }
+            vc.amounts = Amount(amounts: .fruitAmount)
+            case "VegToView":
+                guard let vc = segue.destination as? EqualCupViewController else { return }
+                vc.amounts = Amount(amounts: .vegetableAmount)
+
+            case "DairyToView":
+                guard let vc = segue.destination as? EqualCupViewController else { return }
+                vc.amounts = Amount(amounts: .dairyAmount)
+
+            case "GrainsToView":
+                guard let vc = segue.destination as? EqualCupViewController else { return }
+                vc.amounts = Amount(amounts: .grainAmount)
+
+            case "ProteinToView":
+                guard let vc = segue.destination as? EqualCupViewController else { return }
+                vc.amounts = Amount(amounts: .proteinAmount)
+
+        default:
+            return
         }
     }
     
+  
     
 }
