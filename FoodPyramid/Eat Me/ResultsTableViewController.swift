@@ -52,27 +52,5 @@ class ResultsTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let calories = Calories(calorieIntake: answer(for: indexPath).type)
-        
-        Defaults.calories = calories
-        
-        guard let resultsController = UIStoryboard(name: "Results", bundle: nil).instantiateViewController(withIdentifier: "QuizToResults") as? ResultsTableViewController else { return }
-        
-        resultsController.calories = calories
-        
-        present(resultsController, animated: true, completion: nil)
-    
-    }
-    
-    
-    // segues from quiz to results storyboard
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "QuizToResults" {
-            guard let vc2 = segue.destination as? ResultsTableViewController else { return }
-            
-        }
-    }
     
 }

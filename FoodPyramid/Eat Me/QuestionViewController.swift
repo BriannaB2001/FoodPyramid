@@ -60,7 +60,6 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
-    // tells the row that its selected, and moves it to the next storyboard
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let calories = Calories(calorieIntake: answer(for: indexPath).type)

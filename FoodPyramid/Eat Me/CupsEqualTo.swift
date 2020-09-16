@@ -1,10 +1,12 @@
 //
-//  EqualCups.Swift
+//  CupsEqualTo.swift
 //  Eat Me
 //
 //  Created by Brianna Babcock on 9/15/20.
 //  Copyright © 2020 Brianna Babcock. All rights reserved.
 //
+
+import Foundation
 
 import Foundation
 
