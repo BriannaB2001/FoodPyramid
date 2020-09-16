@@ -17,7 +17,6 @@ class ResultsTableViewController: UITableViewController {
     @IBOutlet weak var grainsLabel: UILabel!
     @IBOutlet weak var proteinLabel: UILabel!
     
-    var responses: [Answer]?
     var calories: Calories?
     
     override func viewDidLoad() {
@@ -50,6 +49,29 @@ class ResultsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GoToQuizOpener" {
             guard let vc = segue.destination as? QuizLauncherViewController else { return }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let calories = Calories(calorieIntake: answer(for: indexPath).type)
+        
+        Defaults.calories = calories
+        
+        guard let resultsController = UIStoryboard(name: "Results", bundle: nil).instantiateViewController(withIdentifier: "QuizToResults") as? ResultsTableViewController else { return }
+        
+        resultsController.calories = calories
+        
+        present(resultsController, animated: true, completion: nil)
+    
+    }
+    
+    
+    // segues from quiz to results storyboard
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "QuizToResults" {
+            guard let vc2 = segue.destination as? ResultsTableViewController else { return }
+            
         }
     }
     

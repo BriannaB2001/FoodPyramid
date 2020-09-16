@@ -18,6 +18,8 @@
 		DAE94A0924D0719100A27B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE94A0824D0719100A27B1C /* AppDelegate.swift */; };
 		DAE94A0B24D0719100A27B1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE94A0A24D0719100A27B1C /* SceneDelegate.swift */; };
 		DAE94A1524D0719200A27B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE94A1324D0719200A27B1C /* LaunchScreen.storyboard */; };
+		DAEC22A42511847C00D56C79 /* EqualCups.Swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC22A32511847C00D56C79 /* EqualCups.Swift */; };
+		DAEC22A625118FCE00D56C79 /* EqualCupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC22A525118FCE00D56C79 /* EqualCupViewController.swift */; };
 		DAEF47E724D3123E00D67A04 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF47E624D3123E00D67A04 /* QuestionData.swift */; };
 		DAEF47E924D31E2400D67A04 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF47E824D31E2400D67A04 /* ResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		DAE94A0A24D0719100A27B1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DAE94A1424D0719200A27B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE94A1624D0719200A27B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAEC22A32511847C00D56C79 /* EqualCups.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualCups.Swift; sourceTree = "<group>"; };
+		DAEC22A525118FCE00D56C79 /* EqualCupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualCupViewController.swift; sourceTree = "<group>"; };
 		DAEF47E624D3123E00D67A04 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		DAEF47E824D31E2400D67A04 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,8 @@
 				DAEF47E624D3123E00D67A04 /* QuestionData.swift */,
 				DACDCC4124F56A2100CAA58D /* QuestionViewController.swift */,
 				DAEF47E824D31E2400D67A04 /* ResultsTableViewController.swift */,
+				DAEC22A525118FCE00D56C79 /* EqualCupViewController.swift */,
+				DAEC22A32511847C00D56C79 /* EqualCups.Swift */,
 				DA42630B24FE8DF00091626E /* Notification.swift */,
 				DA40427824FFDE1900D61B61 /* AlertNotification.swift */,
 				DA686CB12509338800918356 /* UserDefaultsHelper.swift */,
@@ -174,8 +180,10 @@
 				DA40427924FFDE1900D61B61 /* AlertNotification.swift in Sources */,
 				DAE94A0924D0719100A27B1C /* AppDelegate.swift in Sources */,
 				DA686CB22509338800918356 /* UserDefaultsHelper.swift in Sources */,
+				DAEC22A625118FCE00D56C79 /* EqualCupViewController.swift in Sources */,
 				DAEF47E724D3123E00D67A04 /* QuestionData.swift in Sources */,
 				DAE94A0B24D0719100A27B1C /* SceneDelegate.swift in Sources */,
+				DAEC22A42511847C00D56C79 /* EqualCups.Swift in Sources */,
 				DA0A0EEC2500002A00DCA21F /* QuizLauncherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
